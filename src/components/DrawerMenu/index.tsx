@@ -55,7 +55,7 @@ const DrawerMenu: React.FC<IProps> = ({ children }) => {
                 >
                     <DrawerCloseButton />
                     <DrawerHeader color="white" fontSize={36}>
-                        Machê - Menu
+                        Balcão de ingressos - Menu
                     </DrawerHeader>
                     <DrawerBody flexDirection="column">
                         <Accordion defaultIndex={[0]} allowMultiple>
