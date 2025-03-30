@@ -1,0 +1,7 @@
+{
+    "extends": "@rocketseat/eslint-config/react",
+    "rules": {
+      "prettier/prettier": ["error", { "semi": true, "endOfLine": "auto", "tabWidth": 4 }],
+      "react-hooks/exhaustive-deps": "off"
+    }
+  }
