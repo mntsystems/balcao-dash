@@ -54,6 +54,8 @@ export interface Product {
     state: States;
     date: Date;
     highlight: boolean;
+    carnaval?: boolean;
+    reveilon?: boolean;
     imagem_url: string;
     createdAt: Date;
 }

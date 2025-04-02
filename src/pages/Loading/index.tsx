@@ -1,8 +1,7 @@
 import React from "react";
-import { Center, Flex, Heading, Image, keyframes } from "@chakra-ui/react";
+import { Center, Flex, Heading, Image } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../auth";
-import { IoFishOutline } from "react-icons/io5";
 
 const Loading: React.FC = () => {
     const router = useNavigate();
@@ -16,8 +15,15 @@ const Loading: React.FC = () => {
     }, []);
     return (
         <Center h="100vh" bg="primary.300" p={2} flexDirection="column">
-            <Flex>
-                <IoFishOutline color="#40132e" size={50} />
+            <Flex justifyContent="center">
+                <Image
+                    src="/logo.png"
+                    w={250}
+                    alt="Logo"
+                    mx="auto"
+                    mb={10}
+                    mt={10}
+                />
             </Flex>
             <Heading color="primary.100">Aguarde...</Heading>
         </Center>

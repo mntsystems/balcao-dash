@@ -1,7 +1,6 @@
 import axios from "axios";
 import { UserToken } from "./interfaces";
-const BASE_URL =
-    process.env.REACT_APP_API_URL ?? "https://balcao-api.vercel.app/";
+const BASE_URL = process.env.REACT_APP_API_URL ?? "http://localhost:3001/";
 
 const axiosInstance = () => {
     const userJSON = localStorage.getItem("userInfo");

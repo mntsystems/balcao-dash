@@ -9,6 +9,8 @@ import moment from "moment";
 export default class ProductStore {
     public loader = false;
     public highlight = false;
+    public carnaval: boolean | undefined = false;
+    public reveilon: boolean | undefined = false;
     public date: Date | null = new Date();
     public image: any | null = null;
     public productList: Product[] = [];
@@ -54,6 +56,8 @@ export default class ProductStore {
                     imagem_url: this.productImageUrl,
                     date: this.date,
                     highlight: this.highlight,
+                    carnaval: this.carnaval,
+                    reveilon: this.reveilon,
                 });
                 showSuccessToast("Produto editado com sucesso!!");
                 onSuccess();
@@ -64,6 +68,8 @@ export default class ProductStore {
                     state: data.state as States,
                     imagem_url: this.productImageUrl,
                     highlight: this.highlight,
+                    carnaval: this.carnaval,
+                    reveilon: this.reveilon,
                 });
                 showSuccessToast("Produto cadastrado com sucesso!");
                 onSuccess();

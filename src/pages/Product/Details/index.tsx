@@ -15,8 +15,6 @@ import { observer, useLocalObservable } from "mobx-react";
 import { DetailsRow } from "../../../components/DetailsRow";
 import { formatters } from "../../../resources/formatters";
 import ProductStore from "../../../stores/ProductStore";
-import moment from "moment";
-
 const Details: React.FC = observer(() => {
     const { id } = useParams();
     const store = useLocalObservable(() => new ProductStore());
@@ -80,6 +78,14 @@ const Details: React.FC = observer(() => {
                     <DetailsRow
                         label="Adicionada aos destaques?"
                         data={store.product?.highlight ? "Sim" : "Não"}
+                    />
+                    <DetailsRow
+                        label="Carnaval?"
+                        data={store.product?.carnaval ? "Sim" : "Não"}
+                    />
+                    <DetailsRow
+                        label="Reveillon?"
+                        data={store.product?.reveilon ? "Sim" : "Não"}
                     />
                     <DetailsRow
                         label="Cadastrado em:"

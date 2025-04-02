@@ -70,6 +70,9 @@ const CreateOrEdit: React.FC = observer(() => {
                     setValue("state", request.state);
                     store.productImageUrl = request.imagem_url;
                     store.highlight = request.highlight;
+                    store.reveilon = request.reveilon;
+                    store.carnaval = request.carnaval;
+                    store.highlight = request.highlight;
                     store.date = new Date(request.date);
                 }
             };
@@ -191,6 +194,20 @@ const CreateOrEdit: React.FC = observer(() => {
                                 isChecked={store.highlight}
                                 onChange={() =>
                                     (store.highlight = !store.highlight)
+                                }
+                            />
+                            <FormLabel>Carnaval?</FormLabel>
+                            <Switch
+                                isChecked={store.carnaval}
+                                onChange={() =>
+                                    (store.carnaval = !store.carnaval)
+                                }
+                            />
+                            <FormLabel>reveillon?</FormLabel>
+                            <Switch
+                                isChecked={store.reveilon}
+                                onChange={() =>
+                                    (store.reveilon = !store.reveilon)
                                 }
                             />
                         </Stack>
