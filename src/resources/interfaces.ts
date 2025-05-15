@@ -56,6 +56,8 @@ export interface Product {
     highlight: boolean;
     carnaval?: boolean;
     reveilon?: boolean;
+    saojoao?: boolean;
+    teatro?: boolean;
     imagem_url: string;
     createdAt: Date;
 }

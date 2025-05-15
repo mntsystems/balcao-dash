@@ -11,6 +11,8 @@ export default class ProductStore {
     public highlight = false;
     public carnaval: boolean | undefined = false;
     public reveilon: boolean | undefined = false;
+    public saojoao: boolean | undefined = false;
+    public teatro: boolean | undefined = false;
     public date: Date | null = new Date();
     public image: any | null = null;
     public productList: Product[] = [];
@@ -58,6 +60,8 @@ export default class ProductStore {
                     highlight: this.highlight,
                     carnaval: this.carnaval,
                     reveilon: this.reveilon,
+                    saojoao: this.saojoao,
+                    teatro: this.teatro,
                 });
                 showSuccessToast("Produto editado com sucesso!!");
                 onSuccess();
@@ -70,6 +74,8 @@ export default class ProductStore {
                     highlight: this.highlight,
                     carnaval: this.carnaval,
                     reveilon: this.reveilon,
+                    saojoao: this.saojoao,
+                    teatro: this.teatro,
                 });
                 showSuccessToast("Produto cadastrado com sucesso!");
                 onSuccess();
@@ -84,11 +90,11 @@ export default class ProductStore {
     public getProducts = async () => {
         this.loader = true;
         try {
-            const request = await axiosInstance().get<Product[]>(
+            const request = await axiosInstance().get<{ data: Product[] }>(
                 "/product",
                 this.productFilter
             );
-            this.productList = request.data;
+            this.productList = request.data.data;
         } catch (error: any) {
             showErrorToast(error.response.data.message);
         } finally {

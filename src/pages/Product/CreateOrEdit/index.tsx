@@ -72,6 +72,8 @@ const CreateOrEdit: React.FC = observer(() => {
                     store.highlight = request.highlight;
                     store.reveilon = request.reveilon;
                     store.carnaval = request.carnaval;
+                    store.saojoao = request.saojoao;
+                    store.teatro = request.teatro;
                     store.highlight = request.highlight;
                     store.date = new Date(request.date);
                 }
@@ -209,6 +211,18 @@ const CreateOrEdit: React.FC = observer(() => {
                                 onChange={() =>
                                     (store.reveilon = !store.reveilon)
                                 }
+                            />
+                            <FormLabel>São João?</FormLabel>
+                            <Switch
+                                isChecked={store.saojoao}
+                                onChange={() =>
+                                    (store.saojoao = !store.saojoao)
+                                }
+                            />
+                            <FormLabel>Teatro?</FormLabel>
+                            <Switch
+                                isChecked={store.teatro}
+                                onChange={() => (store.teatro = !store.teatro)}
                             />
                         </Stack>
                     </Flex>
